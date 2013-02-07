@@ -30,21 +30,19 @@ TODO
  * maybe make it independent from logging technology by using the java standard one
  * have a look to byteman
 
-`
-public class RequestDetails extends LazilyCreateableElement {
 
-  ...
+    public class RequestDetails extends LazilyCreateableElement {
 
-  private void maybeShowServerEvents(final Element parent,
-      final Element insertAfter, final Css css, final Document document) {
-    if (!info.hasServerTraceUrl()) {
-      return;
-    }
+      ...
 
-    final String traceUrl = info.getServerTraceUrl();
+    private void maybeShowServerEvents(final Element parent,
+          final Element insertAfter, final Css css, final Document document) {
+        if (!info.hasServerTraceUrl()) {
+            return;
+        }
 
-    // TODO(knorton): When playing back from a dump, we do not want to try to
-    // fetch the server-side trace.
-    serverEventController.requestTraceFor(info,
+        final String traceUrl = info.getServerTraceUrl();
 
-`
+        // TODO(knorton): When playing back from a dump, we do not want to try to
+        // fetch the server-side trace.
+        serverEventController.requestTraceFor(info,
