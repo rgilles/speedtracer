@@ -1,0 +1,6 @@
+dependencies {
+    compile libs.gson
+    compile libs.servlet
+    compile libs.aopalliance
+    compile libs.javaxinject
+}

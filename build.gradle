@@ -1,0 +1,36 @@
+String springVersion = "3.1.0.RELEASE"
+
+ext.libs = [
+        junit: "junit:junit:4.11",
+        spring_core: "org.springframework:spring-core:$springVersion",
+        spring_aop: "org.springframework:spring-aop:$springVersion",
+        spring_web: "org.springframework:spring-web:$springVersion",
+        spring_test: "org.springframework:spring-test:$springVersion",
+        gson: "com.google.code.gson:gson:1.4",
+        servlet: "javax.servlet:servlet-api:2.5",
+        aspectj: "org.aspectj:aspectjweaver:1.7.0",
+        httpclient: "commons-httpclient:commons-httpclient:3.1",
+        guice: "com.google.inject:guice:3.0",
+        guice_servlet: "com.google.inject.extensions:guice-servlet:3.0",
+        aopalliance: "aopalliance:aopalliance:1.0",
+        mockito: "org.mockito:mockito-core:1.9.0",
+        javaxinject: "javax.inject:javax.inject:1",
+        jsr305:"com.google.code.findbugs:jsr305:2.0.1"
+]
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        compile "org.slf4j:slf4j-api:1.7.2"
+        testCompile libs.junit
+    }
+
+    version = '1.0-SNAPSHOT'
+}

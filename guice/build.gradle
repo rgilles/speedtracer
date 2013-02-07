@@ -1,0 +1,11 @@
+dependencies {
+    compile libs.guice
+    compile libs.servlet
+    compile libs.javaxinject
+    compile libs.jsr305
+    compile (project(":shared")) {
+        transitive = false
+    }
+
+    testCompile libs.mockito
+}

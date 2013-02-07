@@ -1,0 +1,20 @@
+apply plugin: 'war'
+
+dependencies {
+    compile libs.spring_aop
+    compile libs.spring_web
+    compile libs.servlet
+    compile libs.guice
+    compile libs.guice_servlet
+    compile "org.slf4j:slf4j-log4j12:1.6.0"
+    compile (project(":guice"))
+
+    testCompile (project(":spring"))
+//    testCompile (project(":spring")) {
+//        transitive = false
+//    }
+    testCompile libs.spring_test
+    testCompile libs.httpclient
+    testCompile "org.eclipse.jetty:jetty-webapp:7.0.1.v20091125"
+    testCompile "xerces:xercesImpl:2.9.1"
+}

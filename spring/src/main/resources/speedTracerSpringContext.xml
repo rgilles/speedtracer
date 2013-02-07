@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+	<context:annotation-config />
+	<aop:aspectj-autoproxy />
+
+	<bean id="tracePerformer"
+		class="org.spring4speedtracer.perform.DefaultAspectInterceptor" />
+	<bean id="traceRepository" class="org.speedtracer.collect.ServerTraceRepository" />
+	<bean id="traceWriter" class="org.speedtracer.write.JsonTraceWriter" />
+	<bean id="csvTraceLogger" class="org.speedtracer.log.Log4jCsvTraceLogger" />
+	<bean id="treeTraceLogger" class="org.speedtracer.log.Log4jTreeTraceLogger" />
+	<bean id="stepThresholdTraceLogVoter"
+		class="org.speedtracer.log.voter.StepThresholdTraceLogVoter" />
+	<bean id="traceThreadBridgeProvider"
+		class="org.speedtracer.thread.ServerTraceThreadBridgeProvider" />
+
+</beans>
