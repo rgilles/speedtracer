@@ -9,11 +9,11 @@ google chrome plugin project: http://code.google.com/p/speedtracer/
 
 
 
-https://github.com/square/Dagger
-http://eclipse.org/equinox/weaving/
-http://julien.ponge.info/notes/revisiting-guice-and-aop-with-aspectj/
-http://julien.ponge.info/notes/guice-or-aop-can-be-made-simple-sometimes/
-https://github.com/jponge/guice-aspectj-sample
+ * https://github.com/square/Dagger
+ * http://eclipse.org/equinox/weaving/
+ * http://julien.ponge.info/notes/revisiting-guice-and-aop-with-aspectj/
+ * http://julien.ponge.info/notes/guice-or-aop-can-be-made-simple-sometimes/
+ * https://github.com/jponge/guice-aspectj-sample
 
 TODO
 ----
